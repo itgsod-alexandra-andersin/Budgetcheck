@@ -82,15 +82,25 @@ body {
 }
 .stats {
     position: relative;
-    top: -35px;
+    top: -50px;
 }
-.line {
+.linehor {
     position: relative;
     top: -40px;
     vertical-align: middle;
     width:770px;
     height: 5px;
     background: orange;
+}
+.linever {
+    position: relative;
+    top: -355px;
+    vertical-align: middle;
+    left: 370px;
+    border-style: dashed;
+    width: 0.01px;
+    height: 370px;
+    background: none;
 }
 .order {
     width: 300px;
