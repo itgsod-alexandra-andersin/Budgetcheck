@@ -1,0 +1,12 @@
+require 'bundler'
+
+Bundler.require
+
+namespace :db do
+
+  task :seed do
+    require './config/environment'
+    DataMapper.auto_migrate!
+    require './db/seed'
+  end
+end

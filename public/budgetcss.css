@@ -1,0 +1,108 @@
+body {
+    background-color: #fff;
+}
+.loginbox {
+    position: relative;
+    margin: auto;
+    width: 40%;
+    top: 50%;
+    background-color: darkorange;
+    border: 5px solid;
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 10px;
+}
+.logintext {
+    text-align: center;
+}
+.registerbox {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 40%;
+    top: 50%;
+    background-color: darkorange;
+    border: 5px solid;
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 10px;
+
+}
+.login {
+    position: relative;
+    margin: auto;
+}
+.loginbutton {
+    float: right;
+}
+.homecenter {
+    vertical-align: middle;
+    position: relative;
+    margin: 50px auto;
+    width: 40%;
+    background-color: darkorange;
+    border: 5px solid;
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.ocenter {
+    background-color: darkorange;
+    border: 5px solid;
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    vertical-align: middle;
+    position: relative;
+    margin: 25px auto;
+    width: 60%;
+    height: 500px;
+}
+.center {
+    text-align: center;
+}
+.divwage {
+    width: 100%;
+    text-align:left;
+}
+.nextpage {
+    position: relative;
+    float: right;
+}
+.button {
+    position: relative;
+    left: 10px;
+}
+.oleft {
+    position: relative;
+    left: 150px;
+}
+.oright {
+    position: relative;
+    left: 450px;
+    top: -45px;
+}
+.stats {
+    position: relative;
+    top: -35px;
+}
+.line {
+    position: relative;
+    top: -40px;
+    vertical-align: middle;
+    width:770px;
+    height: 5px;
+    background: orange;
+}
+.order {
+    width: 300px;
+    border: 1px solid #aaa;
+    margin: 10px;
+    background-color: #555;
+}
+
+.order .header span {
+    margin: 5px;
+}
+
+.order .header {
+    background-color: #ccc;
+}

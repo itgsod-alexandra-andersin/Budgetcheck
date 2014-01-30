@@ -1,0 +1,17 @@
+.loginbox
+  .logintext
+    h1 = 'Budgetcheck'
+  .login
+    form action="/login" method="post"
+      .div
+        h2 = "Username"
+        input type="text" name="username"
+      .div
+        h2 = "Password"
+        input type="password" name="password"
+      .loginbutton
+        button type="submit" Login
+
+    p = 'Or Register'
+    form action="/register" method="post"
+      button type="submit" Register
