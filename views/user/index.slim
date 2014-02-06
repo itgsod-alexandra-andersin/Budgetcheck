@@ -1,26 +1,37 @@
-.nextpage
- form action="/overview" method="post"
-  button type="submit" Overview
+
+.rightbar
+  form action="/overview" method="get"
+    button type="submit" Overview
 .homecenter
   form action="/addbudget" method="post"
-    h1 = "Income"
-    .div style="float:left;"
-      h3 = "Wage:"
-    input type="text" name="income"
-    h1 = "Outcome"
-    h3 = "Food:"
-    input type="text" name="food"
-    h3 = "Clothes:"
-    input type="text" name="clothes"
-    h3 = "Loans:"
-    input type="text" name="loans"
-    h3 = "Leisures:"
-    input type="text" name="leisures"
-    h3 = "Amorizations:"
-    input type="text" name="amorizations"
-    h3 = "Misc:"
-    input type="text" name="misc"
-    h3 = "Savings:"
-    input type="text" name="Savings"
-    .button
-    button type="submit" Save
+    h1 style="width: 100%; text-align: center; font-size: 44px;" = "Income"
+    .usertext
+      label for="income" = "Wage:"
+      input type="text" name="income"
+    .linehoruser
+    h1 style="width: 100%; text-align: center; font-size: 44px; padding-top: 30px;" = "Outcome"
+    .usertext
+      .div
+        label for="food" = "Food:"
+        input type="text" name="food"
+      .div
+        label for="clothes" = "Clothes:"
+        input type="text" name="clothes"
+      .div
+        label for="loans" = "Loans:"
+        input type="text" name="loans"
+      .div
+        label for="leisures" = "Leisures:"
+        input type="text" name="leisures"
+      .div
+        label for="amorizations" = "Amorizations:"
+        input type="text" name="amorizations"
+      .div
+        label for="misc" = "Misc:"
+        input type="text" name="misc"
+      .div
+        label for="Savings" = "Savings:"
+        input type="text" name="Savings"
+      .button
+      button type="submit" Save
+

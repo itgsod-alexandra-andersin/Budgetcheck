@@ -35,19 +35,57 @@ body {
 .loginbutton {
     float: right;
 }
+.usertext {
+    text-align: right;
+    width: 85%;
+    font-size: 28px;
+}
+
 .homecenter {
-    vertical-align: middle;
     position: relative;
     margin: 50px auto;
     width: 40%;
-    background-color: darkorange;
-    border: 5px solid;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-.ocenter {
+.leftie {
+    padding-top: 30px;
+    padding-right: 80px;
+    position: absolute;
+    right: 80%;
+    top: 0%;
     background-color: darkorange;
-    border: 5px solid;
+    width: 20%;
+    height: 700px;
+}
+.rightie {
+    padding-top: 30px;
+    padding-left: 80px;
+    position: absolute;
+    left: 80%;
+    top: 0%;
+    background-color: darkorange;
+    width: 20%;
+    height: 700px;
+}
+.rightbar {
+    padding-top: 30px;
+    padding-left: 80px;
+    position: absolute;
+    left: 80%;
+    top: 0%;
+    background-color: darkorange;
+    width: 20%;
+    height: 700px;
+}
+.overline {
+    vertical-align: middle;
+    width:760px;
+    height: 5px;
+    background: orange;
+    left: 40px;
+}
+.ocenter {
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     vertical-align: middle;
@@ -63,10 +101,6 @@ body {
     width: 100%;
     text-align:left;
 }
-.nextpage {
-    position: relative;
-    float: right;
-}
 .button {
     position: relative;
     left: 10px;
@@ -80,9 +114,14 @@ body {
     left: 450px;
     top: -45px;
 }
+.divresult {
+    margin-top: -18px;
+    margin-bottom: -18px;
+}
 .stats {
     position: relative;
     top: -50px;
+    padding: 0px;
 }
 .linehor {
     position: relative;
@@ -91,6 +130,15 @@ body {
     width:770px;
     height: 5px;
     background: orange;
+}
+.linehoruser {
+    position: absolute;
+    top: 28%;
+    left: -80%;
+    vertical-align: middle;
+    width:1200px;
+    height: 5px;
+    background: darkorange;
 }
 .linever {
     position: relative;
