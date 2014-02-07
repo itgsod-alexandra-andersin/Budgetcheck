@@ -1,19 +1,30 @@
 body {
     background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 .loginbox {
     position: relative;
     margin: auto;
-    width: 40%;
-    top: 50%;
+    width: 400px;
+    margin-top: 5%;
     background-color: darkorange;
     border: 5px solid;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    padding: 10px;
+    padding: 30px;
 }
 .logintext {
     text-align: center;
+}
+.overflow {
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+.divhome {
+    font-size: 25px;
 }
 .registerbox {
     text-align: center;
@@ -44,7 +55,7 @@ body {
 .homecenter {
     position: relative;
     margin: 50px auto;
-    width: 40%;
+    width: 500px;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -52,21 +63,20 @@ body {
     padding-top: 30px;
     padding-right: 80px;
     position: absolute;
-    right: 80%;
     top: 0%;
     background-color: darkorange;
-    width: 20%;
-    height: 700px;
+    width: 160px;
+    height: 540px;
 }
 .rightie {
     padding-top: 30px;
     padding-left: 80px;
     position: absolute;
-    left: 80%;
+    right: 160px;
     top: 0%;
     background-color: darkorange;
-    width: 20%;
-    height: 700px;
+    width: 160px;
+    height: 540px;
 }
 .rightbar {
     padding-top: 30px;
@@ -76,7 +86,7 @@ body {
     top: 0%;
     background-color: darkorange;
     width: 20%;
-    height: 700px;
+    height: 600px;
 }
 .overline {
     vertical-align: middle;
@@ -85,14 +95,24 @@ body {
     background: orange;
     left: 40px;
 }
+.overviewbackground {
+    position: absolute;
+    background-color: darkorange;
+    width: 100%;
+    height: 581px;
+}
 .ocenter {
+    padding-top: 21px;
+    position: absolute;
+    margin-left: 300px;
+    background-color: #fff;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     vertical-align: middle;
     position: relative;
-    margin: 25px auto;
-    width: 60%;
-    height: 500px;
+    width: 760px;
+    height: 560px;
+    padding-bottom: 0px;
 }
 .center {
     text-align: center;
@@ -107,20 +127,23 @@ body {
 }
 .oleft {
     position: relative;
-    left: 150px;
+    left: 135px;
 }
 .oright {
     position: relative;
-    left: 450px;
+    left: 515px;
     top: -45px;
 }
 .divresult {
     margin-top: -18px;
     margin-bottom: -18px;
 }
+.divtest {
+    font-size: 24px;
+}
 .stats {
     position: relative;
-    top: -50px;
+    top: -5px;
     padding: 0px;
 }
 .linehor {
@@ -134,20 +157,19 @@ body {
 .linehoruser {
     position: absolute;
     top: 28%;
-    left: -80%;
     vertical-align: middle;
-    width:1200px;
+    width: 100%;
     height: 5px;
     background: darkorange;
 }
 .linever {
     position: relative;
-    top: -355px;
+    top: -330px;
     vertical-align: middle;
     left: 370px;
-    border-style: dashed;
+    border-style: dashed dashed hidden hidden;
     width: 0.01px;
-    height: 370px;
+    height: 350px;
     background: none;
 }
 .order {
@@ -156,7 +178,11 @@ body {
     margin: 10px;
     background-color: #555;
 }
-
+.btn {
+    position: relative;
+    top: -795px;
+    right: -930px;
+}
 .order .header span {
     margin: 5px;
 }

@@ -40,4 +40,8 @@ class Main < Sinatra::Base
     slim :'overview'
   end
 
+  get '/home' do
+    redirect '/login'
+  end
+
 end
