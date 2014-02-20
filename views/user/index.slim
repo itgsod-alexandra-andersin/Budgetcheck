@@ -1,4 +1,3 @@
-
 .linehoruser
 .overflow
 .rightbar
@@ -8,7 +7,7 @@
   form action="/addbudget" method="post"
     h1 style="width: 100%; text-align: center; font-size: 30px;" = "Income"
     .usertext
-      label for="income" = "Wage:"
+      label for="income" = "Income:"
       input type="text" name="income"
     h1 style="width: 100%; text-align: center; font-size: 30px; padding-top: 30px;" = "Outcome"
     .usertext
@@ -32,7 +31,10 @@
         input type="text" name="misc"
       .divtest
         label for="savings" = "Savings:"
-        input type="text" name="Savings"
+        input type="text" name="savings"
+        input type="hidden" name="user_id" value=@user.id
+        input type="hidden" name="date" value=Date.today
       .button
       button type="submit" Save
+
 

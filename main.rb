@@ -32,13 +32,18 @@ class Main < Sinatra::Base
   end
 
   post '/addbudget' do
-  ## SAVE BITCH
+    Budget.create(income: params[:income], food: params[:food], clothes: params[:clothes], loans: params[:loans], leisures: params[:leisures], amorizations: params[:amorizations], misc: params[:misc], savings: params[:savings], unspent: 10, date: params[:date], user_id: params[:user_id])
     redirect '/overview'
   end
 
   get '/overview' do
     slim :'overview'
   end
+
+  get '/stats' do
+    File.read(File.join('views', 'stats.html'))
+  end
+
 
   get '/home' do
     redirect '/login'

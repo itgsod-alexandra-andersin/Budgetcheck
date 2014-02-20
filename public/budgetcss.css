@@ -4,6 +4,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+
 }
 .loginbox {
     position: relative;
@@ -18,10 +19,6 @@ body {
 }
 .logintext {
     text-align: center;
-}
-.overflow {
-    overflow-y:hidden;
-    overflow-x:hidden;
 }
 .divhome {
     font-size: 25px;
@@ -103,8 +100,7 @@ body {
 }
 .ocenter {
     padding-top: 21px;
-    position: absolute;
-    margin-left: 300px;
+    left: 300px;
     background-color: #fff;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -113,9 +109,6 @@ body {
     width: 760px;
     height: 560px;
     padding-bottom: 0px;
-}
-.center {
-    text-align: center;
 }
 .divwage {
     width: 100%;
@@ -135,8 +128,7 @@ body {
     top: -45px;
 }
 .divresult {
-    margin-top: -18px;
-    margin-bottom: -18px;
+    font-size: 24px;
 }
 .divtest {
     font-size: 24px;
@@ -145,6 +137,11 @@ body {
     position: relative;
     top: -5px;
     padding: 0px;
+}
+.avgstats {
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 .linehor {
     position: relative;
@@ -165,12 +162,10 @@ body {
 .linever {
     position: relative;
     top: -330px;
-    vertical-align: middle;
     left: 370px;
     border-style: dashed dashed hidden hidden;
     width: 0.01px;
-    height: 350px;
-    background: none;
+    height: 330px;
 }
 .order {
     width: 300px;
@@ -180,13 +175,30 @@ body {
 }
 .btn {
     position: relative;
-    top: -795px;
+    top: -850px;
     right: -895px;
 }
-.order .header span {
-    margin: 5px;
+
+
+.bar {
+    fill: steelblue;
 }
 
-.order .header {
-    background-color: #ccc;
+.bar:hover {
+    fill: brown;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
 }

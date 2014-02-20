@@ -1,44 +1,43 @@
 .overviewbackground
-  .overflow
-    .ocenter
-      .center
-        h1 = "Report"
-      .oleft
-        h3 = "This month:"
-      .oright
-        h3 = "Average:"
-      .stats
-        .divresult
-          h2 = "Food:"
+  .ocenter
+    h1 style="text-align: center;" = "Report"
+    .oleft
+      h3 style="text-align: left;" = "This month:"
+    .oright
+      h3 style="text-align: left;" = "Average:"
+    .stats
+      .divresult
+        label = "Food: "
+        label = Budget.last.food
         .overline
-        .divresult
-          h2 = "Clothes:"
+        label = "Clothes: "
+        label = Budget.last.clothes
         .overline
-        .divresult
-          h2 = "Loans:"
+        label = "Loans: "
+        label = Budget.last.loans
         .overline
-        .divresult
-          h2 = "Leisures:"
+        label = "Leisures: "
+        label = Budget.last.leisures
         .overline
-        .divresult
-          h2 = "Amorizations:"
+        label = "Amorizations: "
+        label = Budget.last.amorizations
         .overline
-        .divresult
-          h2 = "Misc:"
+        label = "Misc: "
+        label = Budget.last.misc
         .overline
-        .divresult
-          h2 = "Savings:"
+        label = "Savings: "
+        label = Budget.last.savings
         .overline
-        .linever
-      .div style="position: relative; top: -360px; margin-left: 5%;"
-        h3 = "Unspent:"
-      .div style="position: relative; top: -330px; margin-left: 40%; margin-top: 2%;"
-        select
-          option value="manad" Välj en månad:
-          option value="jan" Januari 2014
-          option value="feb" Februari 2014
-          option value="mar" Mars 2014
-      .btn
-        form action="/home" method="get"
-        button type="submit" Log out
-
+      .divresult style="margin-top: 5px; font-size: 19px;"
+        label = "Unspent: "
+        label = "#{Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income} / #{Budget.last.income}"
+    .linever
+    .div style="position: relative; top: -330px; margin-left: 40%; margin-top: 2%;"
+      select
+        option value="manad" Välj en månad:
+        option value="jan" Januari 2014
+        option value="feb" Februari 2014
+        option value="mar" Mars 2014
+    .btn
+      form action="/home" method="get"
+      button type="submit" Log out
