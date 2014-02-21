@@ -2,9 +2,9 @@
   .ocenter
     h1 style="text-align: center;" = "Report"
     .oleft
-      h3 style="text-align: left;" = "This month:"
-    .oright
-      h3 style="text-align: left;" = "Average:"
+      h3 style="text-align: left; position: relative; left: 135px;" = "This month:"
+    .div
+      h3 style="text-align: left; position: relative; left: 400px; top -75px;" = "Average:"
     .stats
       .divresult
         label = "Food: "
@@ -30,14 +30,16 @@
         .overline
       .divresult style="margin-top: 5px; font-size: 19px;"
         label = "Unspent: "
-        label = "#{Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income} / #{Budget.last.income}"
+        label = "#{(Budget.last.income) - (Budget.last.food) - (Budget.last.clothes) - (Budget.last.loans) - (Budget.last.leisures) - (Budget.last.amorizations) - (Budget.last.misc) - (Budget.last.savings)} / #{(Budget.last.income)}"
     .linever
-    .div style="position: relative; top: -330px; margin-left: 40%; margin-top: 2%;"
+    .div style="position: relative; top: -0px; left: 40%; margin-top: 2%;"
       select
         option value="manad" Välj en månad:
         option value="jan" Januari 2014
         option value="feb" Februari 2014
         option value="mar" Mars 2014
+
+  .rightorangebar
     .btn
       form action="/home" method="get"
       button type="submit" Log out
