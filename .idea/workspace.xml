@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b892b95-e3fc-475e-bee5-060e4860de98" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Budgetcheck.iml" afterPath="$PROJECT_DIR$/.idea/Budgetcheck.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="Budgetcheck.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,6 +21,7 @@
     <file path="/stats.slim" changelist="0b892b95-e3fc-475e-bee5-060e4860de98" time="1392899478052" ignored="false" />
     <file path="/stats.html" changelist="0b892b95-e3fc-475e-bee5-060e4860de98" time="1392968791676" ignored="false" />
     <file path="/data.tsv" changelist="0b892b95-e3fc-475e-bee5-060e4860de98" time="1392969674503" ignored="false" />
+    <file path="/Gemfile" changelist="0b892b95-e3fc-475e-bee5-060e4860de98" time="1392972647065" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,16 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="23" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
+            <state line="5" column="44" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36363637">
               <folding />
             </state>
           </provider>
@@ -93,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview.slim" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="overview.slim" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/overview.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="10" selection-start="209" selection-end="209" vertical-scroll-proportion="0.22925764">
+            <state line="5" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -154,9 +165,9 @@
         <option value="$PROJECT_DIR$/views/stats.html" />
         <option value="$PROJECT_DIR$/views/d3/data.tsv" />
         <option value="$PROJECT_DIR$/public/budgetcss.css" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/production.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -529,11 +540,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/register.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="20" selection-start="62" selection-end="62" vertical-scroll-proportion="-1.875" />
@@ -588,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="48" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
@@ -625,7 +624,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/overview.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="10" selection-start="209" selection-end="209" vertical-scroll-proportion="0.22925764">
+        <state line="5" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="44" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36363637">
           <folding />
         </state>
       </provider>
