@@ -13,6 +13,6 @@ class Budget
   property :unspent, Integer
   property :date, Date
 
-  #belongs_to :user
+  belongs_to :user
   #belongs_to :comparison
 end
