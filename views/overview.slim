@@ -3,8 +3,8 @@
     h1 style="text-align: center;" = "Report"
     .oleft
       h3 style="text-align: left; position: relative; left: 135px;" = "This month:"
-    .div
-      h3 style="text-align: left; position: relative; left: 400px; top -75px;" = "Average:"
+    .div style="position: relative; top: -42px;"
+      h3 style="text-align: left; position: relative; left: 400px; top -75px; width: 100px;" = "Average:"
     .stats
       .divresult
         .divlabels
@@ -53,14 +53,9 @@
         .overlineavg
         label = Budget.last.savings
     .linever
-    .div style="position: relative; top: -0px; left: 40%; margin-top: 2%;"
-      select
-        option value="manad" Välj en månad:
-        option value="jan" Januari 2014
-        option value="feb" Februari 2014
-        option value="mar" Mars 2014
 
-  .rightorangebar
-    .btn
-      form action="/home" method="get"
-      button type="submit" Log out
+
+    .rightorangebar
+      .btn style="top: 25px; left: 25px; width: 75px;"
+        form action="/home" method="get"
+        button type="submit" Log out
