@@ -19,7 +19,7 @@ class Main < Sinatra::Base
     if session[:user] == id.to_i
       @user = User.get(session[:user])
     end
-    slim :user/index
+    slim :'user/index'
   end
 
   post '/register' do
@@ -43,7 +43,6 @@ class Main < Sinatra::Base
   get '/stats' do
     File.read(File.join('views', 'stats.html'))
   end
-
 
   get '/home' do
     redirect '/login'

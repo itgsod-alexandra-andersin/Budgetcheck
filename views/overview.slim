@@ -7,30 +7,51 @@
       h3 style="text-align: left; position: relative; left: 400px; top -75px;" = "Average:"
     .stats
       .divresult
-        label = "Food: "
+        .divlabels
+          label = "Food: "
         label = Budget.last.food
         .overline
-        label = "Clothes: "
+        .divlabels
+          label = "Clothes: "
         label = Budget.last.clothes
         .overline
-        label = "Loans: "
+        .divlabels
+          label = "Loans: "
         label = Budget.last.loans
         .overline
-        label = "Leisures: "
+        .divlabels
+          label = "Leisures: "
         label = Budget.last.leisures
         .overline
-        label = "Amorizations: "
+        .divlabels
+          label = "Amorizations: "
         label = Budget.last.amorizations
         .overline
-        label = "Misc: "
+        .divlabels
+          label = "Misc: "
         label = Budget.last.misc
         .overline
-        label = "Savings: "
+        .divlabels
+          label = "Savings: "
         label = Budget.last.savings
         .overline
       .divresult style="margin-top: 5px; font-size: 19px;"
         label = "Unspent: "
-        label = "#{(Budget.last.income) - (Budget.last.food) - (Budget.last.clothes) - (Budget.last.loans) - (Budget.last.leisures) - (Budget.last.amorizations) - (Budget.last.misc) - (Budget.last.savings)} / #{(Budget.last.income)}"
+        label = "#{-Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income} / #{Budget.last.income}"
+      .divavg
+        label = Budget.last.food
+        .overlineavg
+        label = Budget.last.clothes
+        .overlineavg
+        label = Budget.last.loans
+        .overlineavg
+        label = Budget.last.leisures
+        .overlineavg
+        label = Budget.last.amorizations
+        .overlineavg
+        label = Budget.last.misc
+        .overlineavg
+        label = Budget.last.savings
     .linever
     .div style="position: relative; top: -0px; left: 40%; margin-top: 2%;"
       select

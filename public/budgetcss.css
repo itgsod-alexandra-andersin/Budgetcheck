@@ -92,6 +92,10 @@ body {
     background: orange;
     left: 40px;
 }
+
+
+
+
 .overviewbackground {
     position: absolute;
     background-color: darkorange;
@@ -100,7 +104,7 @@ body {
 }
 .ocenter {
     padding-top: 21px;
-    left: 300px;
+    left: 20%;
     background-color: #fff;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -110,27 +114,11 @@ body {
     height: 560px;
     padding-bottom: 0px;
 }
-.divwage {
-    width: 100%;
-    text-align:left;
-}
-.button {
-    position: relative;
-    left: 10px;
-}
 .oleft {
-    position: relative;
-    left: 135px;
 }
 .oright {
-    position: relative;
-    left: 515px;
-    top: -45px;
 }
 .divresult {
-    font-size: 24px;
-}
-.divtest {
     font-size: 24px;
 }
 .stats {
@@ -138,11 +126,43 @@ body {
     top: -5px;
     padding: 0px;
 }
-.avgstats {
-    position: relative;
-    top: 0px;
-    left: 0px;
+.linever {
+    position: absolute;
+    top: 120px;
+    left: 370px;
+    border-style: dashed dashed hidden hidden;
+    width: 0.01px;
+    height: 330px;
 }
+.btn {
+    position: relative;
+}
+.divresult {
+    font-size: 24px;
+    text-align: right;
+    width: 48%;
+}
+.divlabels {
+    text-align: left;
+    float: left;
+}
+.divavg {
+position: absolute;
+    font-size: 24px;
+    left: 70%;
+    top: 0px;
+}
+.overlineavg {
+    vertical-align: middle;
+    width:10px;
+    height: 5px;
+    left: 40px;
+    width: 100px;
+}
+
+
+
+
 .linehor {
     position: relative;
     top: -40px;
@@ -159,23 +179,35 @@ body {
     height: 5px;
     background: darkorange;
 }
-.linever {
-    position: relative;
-    top: -330px;
-    left: 370px;
-    border-style: dashed dashed hidden hidden;
-    width: 0.01px;
-    height: 330px;
-}
 .order {
     width: 300px;
     border: 1px solid #aaa;
     margin: 10px;
     background-color: #555;
 }
-.btn {
-    position: relative;
-    top: -850px;
-    right: -895px;
+.rightorangebar {
+    float:right;
+    position:relative;
+
 }
 
+
+
+
+.divwage {
+    width: 100%;
+    text-align:left;
+}
+
+.button {
+    position: relative;
+    left: 10px;
+}
+.divtest {
+    font-size: 24px;
+}
+.avgstats {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}

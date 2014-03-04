@@ -3,5 +3,5 @@ class Comparison
 
   property :id, Serial
 
-  belongs_to :budget
+  #belongs_to :budget
 end
