@@ -1,10 +1,11 @@
+body style="background-color: darkorange;"
 .overviewbackground
   .ocenter
     h1 style="text-align: center;" = "Report"
     .oleft
       h3 style="text-align: left; position: relative; left: 135px;" = "This month:"
     .div style="position: relative; top: -42px;"
-      h3 style="text-align: left; position: relative; left: 400px; top -75px; width: 100px;" = "Average:"
+      h3 style="text-align: left; position: relative; left: 510px; top -75px; width: 100px;" = "Average:"
     .stats
       .divresult
         .divlabels
@@ -12,7 +13,7 @@
         label = Budget.last.food
         .overline
         .divlabels
-          label = "Clothes: "
+          label = "Clothing: "
         label = Budget.last.clothes
         .overline
         .divlabels
@@ -20,7 +21,7 @@
         label = Budget.last.loans
         .overline
         .divlabels
-          label = "Leisures: "
+          label = "Leisure: "
         label = Budget.last.leisures
         .overline
         .divlabels
@@ -28,7 +29,7 @@
         label = Budget.last.amorizations
         .overline
         .divlabels
-          label = "Misc: "
+          label = "Miscellaneous: "
         label = Budget.last.misc
         .overline
         .divlabels
@@ -37,25 +38,34 @@
         .overline
       .divresult style="margin-top: 5px; font-size: 19px;"
         label = "Unspent: "
-        label = "#{-Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income} / #{Budget.last.income}"
+        label = @totalunspent
+        label = " / "
+        label = Budget.last.income
       .divavg
-        label = Budget.last.food
+        label = @food_avg
         .overlineavg
-        label = Budget.last.clothes
+        label = @clothes_avg
         .overlineavg
-        label = Budget.last.loans
+        label = @loans_avg
         .overlineavg
-        label = Budget.last.leisures
+        label = @leisures_avg
         .overlineavg
-        label = Budget.last.amorizations
+        label = @amorizations_avg
         .overlineavg
-        label = Budget.last.misc
+        label = @misc_avg
         .overlineavg
-        label = Budget.last.savings
+        label = @savings_avg
     .linever
-
-
+    .divwarning
+      p = @warning
+      p = @savingswarning
+      p = @foodwarning
+      p = @clotheswarning
+      p = @loanswarning
+      p = @leisureswarning
+      p = @amorizationswarning
+      p = @miscwarning
     .rightorangebar
       .btn style="top: 25px; left: 25px; width: 75px;"
-        form action="/home" method="get"
-        button type="submit" Log out
+        form action="/" method="get"
+          button type="submit" Log out

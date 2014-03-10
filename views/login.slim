@@ -3,15 +3,18 @@
     h1 = 'Budgetcheck'
   .login
     form action="/login" method="post"
-      .div
-        h2 = "Username"
-        input type="text" name="username"
-      .div
-        h2 = "Password"
-        input type="password" name="password"
+      .div style="position: relative; padding-top: 5px;"
+        h2 style="margin-bottom: -4px;" = "Username"
+        input required="true" type="text" name="username"
+      .div style="position: relative; padding-top: 20px;"
+        h2 style="margin-bottom: -4px;" = "Password"
+        input required="true" type="password" name="password"
       .loginbutton
         button type="submit" Login
 
-    p = 'Or Register'
-    form action="/register" method="post"
-      button type="submit" Register
+    p = 'Dont have an account?'
+    a href="register" = 'Register here!'
+
+
+    /form action="/register" method="post"
+    /  button type="submit" Register

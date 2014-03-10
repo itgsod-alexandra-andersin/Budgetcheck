@@ -22,7 +22,7 @@ class Main < Sinatra::Base
     slim :'user/index'
   end
 
-  post '/register' do
+  get '/register' do
     slim :'register'
   end
 
@@ -37,6 +37,39 @@ class Main < Sinatra::Base
   end
 
   get '/overview' do
+    @totalsavings = Budget.all(:user_id => 1)
+    @food_avg = Budget.avg(:food).round
+    @clothes_avg = Budget.avg(:clothes).round
+    @loans_avg = Budget.avg(:loans).round
+    @leisures_avg = Budget.avg(:leisures).round
+    @amorizations_avg = Budget.avg(:amorizations).round
+    @misc_avg = Budget.avg(:misc).round
+    @savings_avg = Budget.avg(:savings).round
+    @totalunspent = -Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income
+    if @totalunspent < 0
+      @warning = "You have less income than expenses and you have lost money this month. Consider the following:"
+      if Budget.last.food > @food_avg
+        @foodwarning = "Spend less on food"
+      end
+      if Budget.last.clothes > @clothes_avg
+        @clotheswarning = "Spend less on clothes"
+      end
+      if Budget.last.loans > @loans_avg
+        @loanswarning = "Spend less on loans"
+      end
+      if Budget.last.leisures > @leisures_avg
+        @leisureswarning = "Spend less on leisures"
+      end
+      if Budget.last.amorizations > @amorizations_avg
+        @amorizationswarning = "Spend less on amorizations"
+      end
+      if Budget.last.misc > @misc_avg
+        @miscwarning = "Spend less on misc"
+      end
+      if Budget.last.savings > 0
+        @savingswarning = "You have (#{@totalsavings}) in savings, use it"
+      end
+    end
     slim :'overview'
   end
 
