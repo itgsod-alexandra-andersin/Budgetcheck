@@ -1,6 +1,8 @@
 class Main < Sinatra::Base
   enable :sessions
 
+
+
   get '/' do
     slim :'login'
   end
@@ -37,34 +39,35 @@ class Main < Sinatra::Base
   end
 
   get '/overview' do
-    @totalsavings = Budget.all(:user_id => 1)
-    @food_avg = Budget.avg(:food).round
-    @clothes_avg = Budget.avg(:clothes).round
-    @loans_avg = Budget.avg(:loans).round
-    @leisures_avg = Budget.avg(:leisures).round
-    @amorizations_avg = Budget.avg(:amorizations).round
-    @misc_avg = Budget.avg(:misc).round
-    @savings_avg = Budget.avg(:savings).round
+    @user = User.get(session[:user])
+    @totalsavings = Budget.sum(:savings, user: @user)
+    @food_avg = Budget.avg(:food, user: @user).round
+    @clothes_avg = Budget.avg(:clothes, user: @user).round
+    @loans_avg = Budget.avg(:loans, user: @user).round
+    @leisures_avg = Budget.avg(:leisures, user: @user).round
+    @amorizations_avg = Budget.avg(:amorizations, user: @user).round
+    @misc_avg = Budget.avg(:misc, user: @user).round
+    @savings_avg = @totalsavings
     @totalunspent = -Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income
     if @totalunspent < 0
       @warning = "You have less income than expenses and you have lost money this month. Consider the following:"
       if Budget.last.food > @food_avg
-        @foodwarning = "Spend less on food"
+        @foodwarning = "Eat at cheaper places or try to buy cheaper groceries"
       end
       if Budget.last.clothes > @clothes_avg
-        @clotheswarning = "Spend less on clothes"
+        @clotheswarning = "Try to use old clothes instead of buying new ones"
       end
       if Budget.last.loans > @loans_avg
-        @loanswarning = "Spend less on loans"
+        @loanswarning = "See if you can cut down the payment loan for a while"
       end
       if Budget.last.leisures > @leisures_avg
-        @leisureswarning = "Spend less on leisures"
+        @leisureswarning = "Spend more time at home and try not to buy things you won't use"
       end
       if Budget.last.amorizations > @amorizations_avg
-        @amorizationswarning = "Spend less on amorizations"
+        @amorizationswarning = "Spend less on amorizations for a while."
       end
       if Budget.last.misc > @misc_avg
-        @miscwarning = "Spend less on misc"
+        @miscwarning = "Try to keep the spending on things you don't need to a minimum"
       end
       if Budget.last.savings > 0
         @savingswarning = "You have (#{@totalsavings}) in savings, use it"

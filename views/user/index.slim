@@ -6,35 +6,34 @@
   form action="/addbudget" method="post"
     h1 style="width: 100%; text-align: center; font-size: 30px;" = "Income"
     .usertext
-      label for="income" = "Income:"
-      input type="text" name="income"
+      label for="income" = "Wage:"
+      input required="true" type="text" name="income"
     .linehoruser
-    h1 style="width: 100%; text-align: center; font-size: 30px; padding-top: 30px;" = "Outcome"
+    h1 style="width: 100%; text-align: center; font-size: 30px; padding-top: 30px;" = "Expenses"
     .usertext
       .divtest
         label for="food" = "Food:"
-        input type="text" name="food"
+        input required="true" type="text" name="food"
       .divtest
-        label for="clothes" = "Clothes:"
-        input type="text" name="clothes"
+        label for="clothes" = "Clothing:"
+        input required="true" type="text" name="clothes"
       .divtest
         label for="loans" = "Loans:"
-        input type="text" name="loans"
+        input required="true" type="text" name="loans"
       .divtest
-        label for="leisures" = "Leisures:"
-        input type="text" name="leisures"
+        label for="leisures" = "Leisure:"
+        input required="true" type="text" name="leisures"
       .divtest
         label for="amorizations" = "Amorizations:"
-        input type="text" name="amorizations"
+        input required="true" type="text" name="amorizations"
       .divtest
-        label for="misc" = "Misc:"
-        input type="text" name="misc"
+        label for="misc" = "Miscellaneous:"
+        input required="true" type="text" name="misc"
       .divtest
         label for="savings" = "Savings:"
-        input type="text" name="savings"
+        input required="true" type="text" name="savings"
         input type="hidden" name="user_id" value=@user.id
         input type="hidden" name="date" value=Date.today
       .button
       button type="submit" Save
-
-
+p = @user.key.first.to_s

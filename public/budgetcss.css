@@ -12,7 +12,7 @@ body {
     width: 400px;
     margin-top: 5%;
     background-color: darkorange;
-    border: 5px solid;
+    border-radius: 15px;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 30px;
@@ -27,10 +27,11 @@ body {
     text-align: center;
     position: relative;
     margin: auto;
+    margin-top: 5%;
     width: 40%;
     top: 50%;
     background-color: darkorange;
-    border: 5px solid;
+    border-radius: 15px;
     color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 10px;
@@ -83,8 +84,26 @@ body {
     top: 0%;
     background-color: darkorange;
     width: 20%;
-    height: 600px;
+    height: 100%;
 }
+p {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    font-size: 14px;
+    text-shadow: 0.5px 0 black, 0.5px black, 0.5px 0 black, 0.5px black;
+
+}
+a {
+    position: relative;
+    top: 10px;
+    color: dodgerblue;
+    font-size: 14px;
+    text-shadow: 0.5px 0 black, 0.5px black, 0.5px 0 black, 0.5px black;
+}
+
+
+
+
 .overline {
     vertical-align: middle;
     width:760px;
@@ -92,10 +111,6 @@ body {
     background: orange;
     left: 40px;
 }
-
-
-
-
 .overviewbackground {
     position: absolute;
     background-color: darkorange;
@@ -144,10 +159,12 @@ body {
 }
 .divlabels {
     text-align: left;
+    width: 167px;
     float: left;
 }
 .divavg {
-position: absolute;
+    position: absolute;
+    text-align: center  ;
     font-size: 24px;
     left: 70%;
     top: 0px;
@@ -157,7 +174,11 @@ position: absolute;
     width:10px;
     height: 5px;
     left: 40px;
-    width: 100px;
+}
+.divwarning p {
+    margin-top: 8px;
+    color: #000;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
 
 
@@ -175,9 +196,8 @@ position: absolute;
     position: relative;
     margin-top: 7%;
     margin-bottom: -7%;
-    vertical-align: middle;
-    width: 500%;
-    left: -100%;
+    width: 250%;
+    left: -80%;
     height: 5px;
     background: darkorange;
 }
@@ -194,23 +214,6 @@ position: absolute;
     top: 0%;
     left: 100%;
 
-}
-.divwarning p {
-    margin-top: 8px;
-}
-p {
-    margin-top: 30px;
-    margin-bottom: -10px;
-    font-size: 14px;
-    text-shadow: 0.5px 0 black, 0.5px black, 0.5px 0 black, 0.5px black;
-
-}
-a {
-    position: relative;
-    top: 10px;
-    color: dodgerblue;
-    font-size: 14px;
-    text-shadow: 0.5px 0 black, 0.5px black, 0.5px 0 black, 0.5px black;
 }
 
 
