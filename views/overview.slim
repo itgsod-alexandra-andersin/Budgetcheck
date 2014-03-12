@@ -70,3 +70,22 @@ body style="background-color: #c8de42;"
       .btn style="top: 25px; left: 25px; width: 75px;"
         form action="/" method="get"
           button type="submit" Log out
+
+          label for="trigger" Månad
+          ul
+            li
+              a href="/history" Januari 2014
+            li
+              a href="/history" Februari 2014
+            li
+              a href="/history" Mars 2014
+
+
+
+        .dropdown style="position: relative; left: -12px; margin: 35px;"
+          select onchange="window.location=this.options[this.selectedIndex].value;"
+            option value="" Välj en månad:
+            option value="/history" Januari 2014
+            option value="Feb 2014" Februari 2014
+
+

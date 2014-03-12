@@ -77,11 +77,17 @@ class Main < Sinatra::Base
   end
 
   get '/stats' do
-    File.read(File.join('views', 'stats.html'))
+   # File.read(File.join('views', 'stats.html'))
   end
 
   get '/home' do
     redirect '/login'
+  end
+
+  get '/history' do
+    @user = User.get(session[:user])
+    @budgetcounts = Budget.all(user: @user)
+    slim :'history'
   end
 
 end
