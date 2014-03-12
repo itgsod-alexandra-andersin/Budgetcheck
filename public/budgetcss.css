@@ -11,14 +11,19 @@ body {
     margin: auto;
     width: 400px;
     margin-top: 5%;
-    background-color: darkorange;
+   /*/ background-color: #a7d22c; /*/
     border-radius: 15px;
-    color: orange;
+    background-image:url('try2.jpg');
+    background-size:600px 600px;
+    background-repeat:no-repeat;
+    color: #bdec36;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 30px;
 }
 .logintext {
     text-align: center;
+    color: #c0ef3a;
+    text-shadow: -1px 0 dark, 0 1px darkgreen, 1px 0 darkgreen, 0 -1px darkgreen;
 }
 .divhome {
     font-size: 25px;
@@ -30,9 +35,9 @@ body {
     margin-top: 5%;
     width: 40%;
     top: 50%;
-    background-color: darkorange;
+    background-image:url('try2.jpg');
     border-radius: 15px;
-    color: orange;
+    color: #a7d22c;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 10px;
 
@@ -48,13 +53,14 @@ body {
     text-align: right;
     width: 85%;
     font-size: 28px;
+    color: #bdec36;
 }
 
 .homecenter {
     position: relative;
     margin: 50px auto;
     width: 500px;
-    color: orange;
+    color: #000;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .leftie {
@@ -62,7 +68,7 @@ body {
     padding-right: 80px;
     position: absolute;
     top: 0%;
-    background-color: darkorange;
+    background-color: #a7d22c;
     width: 160px;
     height: 540px;
 }
@@ -72,7 +78,7 @@ body {
     position: absolute;
     right: 160px;
     top: 0%;
-    background-color: darkorange;
+    background-color: #a7d22c;
     width: 160px;
     height: 540px;
 }
@@ -82,7 +88,7 @@ body {
     position: absolute;
     left: 80%;
     top: 0%;
-    background-color: darkorange;
+    background-color: #c8de42;
     width: 20%;
     height: 100%;
 }
@@ -108,12 +114,12 @@ a {
     vertical-align: middle;
     width:760px;
     height: 5px;
-    background: orange;
+    background: #a7d22c;
     left: 40px;
 }
 .overviewbackground {
     position: absolute;
-    background-color: darkorange;
+    background-color: c8de42;
     width: 100%;
     height: 581px;
 }
@@ -121,20 +127,17 @@ a {
     padding-top: 21px;
     left: 20%;
     background-color: #fff;
-    color: orange;
+    color: #000;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     vertical-align: middle;
     position: relative;
     width: 760px;
-    height: 560px;
+    height: 580px;
     padding-bottom: 0px;
 }
 .oleft {
 }
 .oright {
-}
-.divresult {
-    font-size: 24px;
 }
 .stats {
     position: relative;
@@ -145,9 +148,10 @@ a {
     position: absolute;
     top: 120px;
     left: 370px;
+    color: #a7d22c;
     border-style: dashed dashed hidden hidden;
     width: 0.01px;
-    height: 330px;
+    height: 320px;
 }
 .btn {
     position: relative;
@@ -156,11 +160,13 @@ a {
     font-size: 24px;
     text-align: right;
     width: 48%;
+    color: #bdec36;
 }
 .divlabels {
     text-align: left;
     width: 167px;
     float: left;
+    color: #a7d22c;
 }
 .divavg {
     position: absolute;
@@ -168,6 +174,7 @@ a {
     font-size: 24px;
     left: 70%;
     top: 0px;
+    color: #bdec36;
 }
 .overlineavg {
     vertical-align: middle;
@@ -177,20 +184,17 @@ a {
 }
 .divwarning p {
     margin-top: 8px;
-    color: #000;
+    padding-top: 2px;
+    color: #ff0000;
     text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
-
-
-
-
 .linehor {
     position: relative;
     top: -40px;
     vertical-align: middle;
     width:770px;
     height: 5px;
-    background: orange;
+    background: #a7d22c;
 }
 .linehoruser {
     position: relative;
@@ -199,7 +203,7 @@ a {
     width: 250%;
     left: -80%;
     height: 5px;
-    background: darkorange;
+    background: #c8de42;
 }
 .order {
     width: 300px;
@@ -229,6 +233,7 @@ a {
 }
 .divtest {
     font-size: 24px;
+    color: #bdec36;
 }
 .avgstats {
     position: relative;
