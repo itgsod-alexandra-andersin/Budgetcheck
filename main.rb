@@ -1,4 +1,5 @@
 class Main < Sinatra::Base
+
   enable :sessions
 
 
@@ -6,6 +7,8 @@ class Main < Sinatra::Base
   get '/' do
     slim :'login'
   end
+
+
 
   post '/login' do
     user = User.first(username: params[:username])
@@ -17,6 +20,8 @@ class Main < Sinatra::Base
     end
   end
 
+
+
   get '/user/:id' do |id|
     if session[:user] == id.to_i
       @user = User.get(session[:user])
@@ -24,22 +29,36 @@ class Main < Sinatra::Base
     slim :'user/index'
   end
 
+
+
   get '/register' do
     slim :'register'
   end
+
+
 
   post '/adduser' do
     User.create(username: params[:regusername], password: params[:regpassword]).save
     redirect '/'
   end
 
+
+
   post '/addbudget' do
     Budget.create(income: params[:income], food: params[:food], clothes: params[:clothes], loans: params[:loans], leisures: params[:leisures], amorizations: params[:amorizations], misc: params[:misc], savings: params[:savings], unspent: 10, date: params[:date], user_id: params[:user_id])
     redirect '/overview'
   end
 
+
+
   get '/overview' do
     @user = User.get(session[:user])
+    @newdate = Budget.get(session[:date])
+    @date = Budget.last.date
+    if @newdate
+      @date = @newdate
+    end
+    @lastbudget = Budget.last(user: @user, date: @date)
     @totalsavings = Budget.sum(:savings, user: @user)
     @food_avg = Budget.avg(:food, user: @user).round
     @clothes_avg = Budget.avg(:clothes, user: @user).round
@@ -76,18 +95,34 @@ class Main < Sinatra::Base
     slim :'overview'
   end
 
+
+
   get '/stats' do
-   # File.read(File.join('views', 'stats.html'))
+    File.read(File.join('views', 'stats.html'))
   end
+
+
 
   get '/home' do
     redirect '/login'
   end
+
+
 
   get '/history' do
     @user = User.get(session[:user])
     @budgetcounts = Budget.all(user: @user)
     slim :'history'
   end
+
+
+
+  get '/newdate' do
+    #@newdate = params[:newdate]
+    session[:date] = params[:newdate]
+    redirect '/overview'
+  end
+
+
 
 end

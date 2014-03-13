@@ -10,31 +10,31 @@ body style="background-color: #c8de42;"
       .divresult
         .divlabels
           label = "Food: "
-        label = Budget.last.food
+        label = @lastbudget.food
         .overline
         .divlabels
           label = "Clothing: "
-        label = Budget.last.clothes
+        label = @lastbudget.clothes
         .overline
         .divlabels
           label = "Loans: "
-        label = Budget.last.loans
+        label = @lastbudget.loans
         .overline
         .divlabels
           label = "Leisure: "
-        label = Budget.last.leisures
+        label = @lastbudget.leisures
         .overline
         .divlabels
           label = "Amorizations: "
-        label = Budget.last.amorizations
+        label = @lastbudget.amorizations
         .overline
         .divlabels
           label = "Miscellaneous: "
-        label = Budget.last.misc
+        label = @lastbudget.misc
         .overline
         .divlabels
           label = "Savings: "
-        label = Budget.last.savings
+        label = @lastbudget.savings
         .overline
       .divresult style="color: #9ecf10;margin-top: 5px; font-size: 19px;"
         label = "Unspent: "
@@ -71,21 +71,8 @@ body style="background-color: #c8de42;"
         form action="/" method="get"
           button type="submit" Log out
 
-          label for="trigger" Månad
-          ul
-            li
-              a href="/history" Januari 2014
-            li
-              a href="/history" Februari 2014
-            li
-              a href="/history" Mars 2014
-
-
-
-        .dropdown style="position: relative; left: -12px; margin: 35px;"
-          select onchange="window.location=this.options[this.selectedIndex].value;"
-            option value="" Välj en månad:
-            option value="/history" Januari 2014
-            option value="Feb 2014" Februari 2014
-
-
+      .dropdown style="position: relative; left: -12px; margin: 35px;"
+        select onchange="window.location=this.options[this.selectedIndex].value;"
+          - for budgetcount in @budgetcounts
+            .budgetcount
+              option value="#{budgetcount.date}" #{budgetcount.date}
