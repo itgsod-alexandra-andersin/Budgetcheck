@@ -45,7 +45,7 @@ class Main < Sinatra::Base
 
 
   post '/addbudget' do
-    Budget.create(income: params[:income], food: params[:food], clothes: params[:clothes], loans: params[:loans], leisures: params[:leisures], amorizations: params[:amorizations], misc: params[:misc], savings: params[:savings], unspent: 10, date: params[:date], user_id: params[:user_id])
+    Budget.create(income: params[:income], food: params[:food], clothes: params[:clothes], loans: params[:loans], leisures: params[:leisures], amorizations: params[:amorizations], misc: params[:misc], savings: params[:savings], date: params[:date], user_id: params[:user_id])
     redirect '/overview'
   end
 
@@ -58,7 +58,6 @@ class Main < Sinatra::Base
     if @newdate
       @date = @newdate
     end
-    @lastbudget = Budget.last(user: @user, date: @date)
     @totalsavings = Budget.sum(:savings, user: @user)
     @food_avg = Budget.avg(:food, user: @user).round
     @clothes_avg = Budget.avg(:clothes, user: @user).round
@@ -67,7 +66,16 @@ class Main < Sinatra::Base
     @amorizations_avg = Budget.avg(:amorizations, user: @user).round
     @misc_avg = Budget.avg(:misc, user: @user).round
     @savings_avg = @totalsavings
+    @income = Budget.last.income
     @totalunspent = -Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income
+    @failcheck = Budget.last(user: @user, date: @date)
+    if @failcheck
+      @lastbudget = Budget.last(user: @user, date: @date)
+    else
+      @lastbudget = Budget.first_or_create(:food => 0, :clothes => 0, :loans => 0, :loans => 0, :leisures => 0, :amorizations => 0, :misc => 0, :savings => 0)
+      @totalunspent = 0
+      @income = 0
+    end
     if @totalunspent < 0
       @warning = "You have less income than expenses and you have lost money this month. Consider the following:"
       if Budget.last.food > @food_avg
@@ -98,7 +106,7 @@ class Main < Sinatra::Base
 
 
   get '/stats' do
-    File.read(File.join('views', 'stats.html'))
+#    File.read(File.join('views', 'stats.html'))
   end
 
 

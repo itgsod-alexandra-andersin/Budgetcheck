@@ -40,7 +40,7 @@ body style="background-color: #c8de42;"
         label = "Unspent: "
         label = @totalunspent
         label = " / "
-        label = Budget.last.income
+        label = @income
       .divavg
         label = @food_avg
         .overlineavg
@@ -71,7 +71,7 @@ body style="background-color: #c8de42;"
         form action="/" method="get"
           button type="submit" Log out
 
-      .dropdown style="position: relative; left: -12px; margin: 35px;"
+  /    .dropdown style="position: relative; left: -12px; margin: 35px;"
         select onchange="window.location=this.options[this.selectedIndex].value;"
           - for budgetcount in @budgetcounts
             .budgetcount

@@ -10,7 +10,6 @@ class Budget
   property :amorizations, Integer
   property :misc, Integer
   property :savings, Integer
-  property :unspent, Integer
   property :date, Date
 
   belongs_to :user
