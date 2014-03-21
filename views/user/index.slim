@@ -1,3 +1,4 @@
+.linehoruser
 .rightbar
   form action="/overview" method="get"
     button type="submit" Overview
@@ -7,7 +8,6 @@
     .usertext
       label for="income" = "Wage:"
       input required="true" type="text" name="income"
-    .linehoruser
     h1 style="width: 100%; color: #a7d22c; text-align: center; font-size: 30px; padding-top: 30px;" = "Expenses"
     .usertext
       .divtest
@@ -35,4 +35,3 @@
         input type="hidden" name="date" value=Date.today
       .button
       button type="submit" Save
-p = @user.key.first.to_s
