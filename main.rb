@@ -53,10 +53,10 @@ class Main < Sinatra::Base
 
   get '/overview' do
     @user = User.get(session[:user])
-    @newdate = Budget.get(session[:date])
-    @date = Budget.last.date
+    @newdate = (session[:id])
+    @id = Budget.first_or_create(user: @user).id
     if @newdate
-      @date = @newdate
+      @id = @newdate
     end
     @totalsavings = Budget.sum(:savings, user: @user)
     @food_avg = Budget.avg(:food, user: @user).round
@@ -66,11 +66,14 @@ class Main < Sinatra::Base
     @amorizations_avg = Budget.avg(:amorizations, user: @user).round
     @misc_avg = Budget.avg(:misc, user: @user).round
     @savings_avg = @totalsavings
-    @income = Budget.last.income
-    @totalunspent = -Budget.last.food - Budget.last.clothes - Budget.last.loans - Budget.last.leisures - Budget.last.amorizations - Budget.last.misc - Budget.last.savings + Budget.last.income
-    @failcheck = Budget.last(user: @user, date: @date)
+    @lastbudget = Budget.first_or_create(:food => 0, :clothes => 0, :loans => 0, :loans => 0, :leisures => 0, :amorizations => 0, :misc => 0, :savings => 0)
+    @totalunspent = 0
+    @income = 0
+    @failcheck = Budget.last(user: @user, id: @id)
     if @failcheck
-      @lastbudget = Budget.last(user: @user, date: @date)
+      @lastbudget = Budget.last(user: @user, id: @id)
+      @income = Budget.last(user: @user).income
+      @totalunspent = -Budget.last(user: @user, id: @id).food - Budget.last(user: @user, id: @id).clothes - Budget.last(user: @user, id: @id).loans - Budget.last(user: @user, id: @id).leisures - Budget.last(user: @user, id: @id).amorizations - Budget.last(user: @user, id: @id).misc - Budget.last(user: @user, id: @id).savings + Budget.last(user: @user, id: @id).income
     else
       @lastbudget = Budget.first_or_create(:food => 0, :clothes => 0, :loans => 0, :loans => 0, :leisures => 0, :amorizations => 0, :misc => 0, :savings => 0)
       @totalunspent = 0
@@ -99,6 +102,7 @@ class Main < Sinatra::Base
       if Budget.last.savings > 0
         @savingswarning = "You have (#{@totalsavings}) in savings, use it"
       end
+      session[:id] = nil
     end
     slim :'overview'
   end
@@ -115,22 +119,18 @@ class Main < Sinatra::Base
     redirect '/login'
   end
 
-
-
   get '/history' do
     @user = User.get(session[:user])
     @budgetcounts = Budget.all(user: @user)
     slim :'history'
   end
 
-
-
   get '/newdate' do
     #@newdate = params[:newdate]
-    session[:date] = params[:newdate]
+    session[:id] = params[:newdate]
+
     redirect '/overview'
   end
-
 
 
 end
