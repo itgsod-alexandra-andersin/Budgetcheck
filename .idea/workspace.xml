@@ -7,7 +7,7 @@
     </list>
     <ignored path="Budgetcheck.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1b7ee74b-0cc0-4f5b-9e10-538a6459ea43" time="1395410752993" ignored="false" />
+    <file path="/Dummy.txt" changelist="1b7ee74b-0cc0-4f5b-9e10-538a6459ea43" time="1395411407684" ignored="false" />
     <file path="/main.rb" changelist="1b7ee74b-0cc0-4f5b-9e10-538a6459ea43" time="1395404749254" ignored="false" />
     <file path="/register.slim" changelist="1b7ee74b-0cc0-4f5b-9e10-538a6459ea43" time="1395404840357" ignored="false" />
     <file path="/budgetcss.css" changelist="1b7ee74b-0cc0-4f5b-9e10-538a6459ea43" time="1395410674016" ignored="false" />
@@ -51,7 +51,7 @@
       <file leaf-file-name="budgetcss.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/budgetcss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="16" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.4874759">
+            <state line="197" column="11" selection-start="3699" selection-end="3699" vertical-scroll-proportion="0.6820809">
               <folding />
             </state>
           </provider>
@@ -245,7 +245,11 @@
       <created>1395410762414</created>
       <updated>1395410762414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Slight design changes(hopefully more optimized to larger screens by using a percentage value!).. Version 2.0.">
+      <created>1395411410615</created>
+      <updated>1395411410615</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -314,7 +318,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Slight design changes(hopefully more optimized to larger screens by using a percentage value!)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slight design changes(hopefully more optimized to larger screens by using a percentage value!).. Version 2.0." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -330,6 +334,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Bugs are fixed and you cannot register with an existing username anymore!" />
     <MESSAGE value="Slight design changes(hopefully more optimized to larger screens by using a percentage value!)" />
+    <MESSAGE value="Slight design changes(hopefully more optimized to larger screens by using a percentage value!).. Version 2.0." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -372,7 +377,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/budgetcss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="16" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.4874759">
+        <state line="197" column="11" selection-start="3699" selection-end="3699" vertical-scroll-proportion="0.6820809">
           <folding />
         </state>
       </provider>
