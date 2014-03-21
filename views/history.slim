@@ -1,0 +1,9 @@
+.registerbox
+  h2 = 'Choose Budget'
+  /select
+  - for budgetcount in @budgetcounts
+    .budgetcount
+      /  option value="#{budgetcount.date}" #{budgetcount.date}
+      form action="/newdate" method="get"
+        input type="hidden" name="newdate" value="#{budgetcount.id}"
+        button type="submit" #{budgetcount.date}

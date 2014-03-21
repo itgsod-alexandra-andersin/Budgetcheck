@@ -11,8 +11,8 @@ class Main < Sinatra::Base
 
 
   post '/login' do
-    user = User.first(username: params[:username])
-    if user && user.password == params[:password]
+    user = User.first(username: params[:username].downcase)
+    if user && user.password == params[:password].downcase
       session[:user] = user.id
       redirect "/user/#{user.id}"
     else
@@ -38,7 +38,19 @@ class Main < Sinatra::Base
 
 
   post '/adduser' do
-    User.create(username: params[:regusername], password: params[:regpassword]).save
+    i = 0
+    usernameerror = 0
+    while i < User.last.id
+      i += 1
+      if params[:regusername] == User.last(id: i).username
+        usernameerror = 1
+      end
+    end
+    if usernameerror == 1
+      return "Username #{params[:regusername]} already exist, please choose another"
+    else
+      User.create(username: params[:regusername].downcase, password: params[:regpassword].downcase).save
+    end
     redirect '/'
   end
 
@@ -46,15 +58,15 @@ class Main < Sinatra::Base
 
   post '/addbudget' do
     Budget.create(income: params[:income], food: params[:food], clothes: params[:clothes], loans: params[:loans], leisures: params[:leisures], amorizations: params[:amorizations], misc: params[:misc], savings: params[:savings], date: params[:date], user_id: params[:user_id])
+    session[:id] = Budget.last.id
     redirect '/overview'
   end
-
 
 
   get '/overview' do
     @user = User.get(session[:user])
     @newdate = (session[:id])
-    @id = Budget.first_or_create(user: @user).id
+    @id = Budget.first_or_create(id: @newdate).id
     if @newdate
       @id = @newdate
     end
@@ -72,8 +84,8 @@ class Main < Sinatra::Base
     @failcheck = Budget.last(user: @user, id: @id)
     if @failcheck
       @lastbudget = Budget.last(user: @user, id: @id)
-      @income = Budget.last(user: @user).income
-      @totalunspent = -Budget.last(user: @user, id: @id).food - Budget.last(user: @user, id: @id).clothes - Budget.last(user: @user, id: @id).loans - Budget.last(user: @user, id: @id).leisures - Budget.last(user: @user, id: @id).amorizations - Budget.last(user: @user, id: @id).misc - Budget.last(user: @user, id: @id).savings + Budget.last(user: @user, id: @id).income
+      @income = Budget.last(user: @user, id: @newdate).income
+      @totalunspent = -Budget.last(user: @user, id: @newdate).food - Budget.last(user: @user, id: @newdate).clothes - Budget.last(user: @user, id: @newdate).loans - Budget.last(user: @user, id: @newdate).leisures - Budget.last(user: @user, id: @newdate).amorizations - Budget.last(user: @user, id: @newdate).misc - Budget.last(user: @user, id: @newdate).savings + Budget.last(user: @user, id: @newdate).income
     else
       @lastbudget = Budget.first_or_create(:food => 0, :clothes => 0, :loans => 0, :loans => 0, :leisures => 0, :amorizations => 0, :misc => 0, :savings => 0)
       @totalunspent = 0
