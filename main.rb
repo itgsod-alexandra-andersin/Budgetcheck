@@ -122,7 +122,7 @@ class Main < Sinatra::Base
 
 
   get '/stats' do
-#    File.read(File.join('views', 'stats.html'))
+    File.read(File.join('views', 'stats.html'))
   end
 
 
