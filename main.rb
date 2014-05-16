@@ -122,9 +122,7 @@ class Main < Sinatra::Base
 
 
   get '/stats' do
-    db = Mysql.new('localhost', 'user', 'password', 'database')
-    File.read(File.join('views', 'stats.html'))
-
+    slim :'stats'
   end
 
 
