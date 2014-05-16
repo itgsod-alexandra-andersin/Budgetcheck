@@ -119,7 +119,13 @@ class Main < Sinatra::Base
     slim :'overview'
   end
 
-
+  get '/calc' do
+    #@user = User.get(session[:user])
+    #@budgets = Budget.all(user: @user)
+    User.generate_tsv_files
+    #slim :'calc'
+    redirect '/stats'
+  end
 
   get '/stats' do
     slim :'stats'

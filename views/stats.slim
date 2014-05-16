@@ -15,9 +15,7 @@ javascript:
       .scale(x)
       .orient("bottom");
 
-  // create left yAxis
   var yAxisLeft = d3.svg.axis().scale(y0).ticks(4).orient("left");
-  // create right yAxis
   var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient("right");
 
   var svg = d3.select("body").append("svg")
